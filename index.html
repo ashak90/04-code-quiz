@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz Challenge</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
         <div id="highscores">
             <button> View Highscores</button>
         </div> 
-        <div id= "time"> Time: </div>
+        <div id= "time"> Time: 0 seconds</div>
     </header>
     <main class="container">
         <div id="start">
@@ -23,15 +24,19 @@
             <button class="start-btn" class="start-btn btn"> Start</button>
 
         </div>
-        <div class="question-container" class="hide">
-            <div id="answer-buttons" id="btn-grid">
+        <div class="question-container" id="hide">
+            <h2 id="question"> Question </h2>
+            <div id="answer-buttons" class="btn-grid">
                 <button class="btn"> Answer 1 </button>
                 <button class="btn"> Answer 2 </button>
                 <button class="btn"> Answer 3 </button>
                 <button class="btn"> Answer 4 </button>
                 </di>
-            </div>
+        </div>
     </main>
+    
+
+    <script src="./js/script.js"></script> 
 
 
 </body>
