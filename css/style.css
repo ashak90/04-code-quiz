@@ -11,7 +11,7 @@ header {
     margin-top: 20px;
 }
 
-#time {
+#timer {
     float: right;
     color: white;
 }
@@ -39,7 +39,7 @@ main {
     box-shadow: 0 0 10;
 }
 
-.question-container {
+#question-container {
     width: 800px;
     max-height: 80%;
     padding: 10px;
@@ -56,6 +56,6 @@ main {
     margin: 5px; 
 }
 
-#hide {
+.hide {
     display: none;
 }
