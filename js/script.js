@@ -15,10 +15,14 @@ startButton.addEventListener('click', startGame)
 function startGame() {
     console.log('Started')
     startButton.classList.add('hide')
-    resetState()
     shuffleQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionsIndex = 0
     questionContainerElement.classList.remove('hide')
+    setTime()
+    setNextQuestion()
+}
+
+function setTime () {
     var timeLeft = 5;
 
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
@@ -34,19 +38,18 @@ function startGame() {
             timerEl.textContent = 'Timer: ' + timeLeft + ' second remaining';
             timeLeft--;
         }
-        // else {
-        //     // Once `timeLeft` gets to 0, set `timerEl` to an empty string
-        //     timerEl.textContent = '';
-        //     // Use `clearInterval()` to stop the timer
-        //     clearInterval(timeInterval);
-        //     // Call the `displayMessage()` function
-        //     displayMessage();
-        //   }
+        else {
+            // Once `timeLeft` gets to 0, set `timerEl` to an empty string
+            timerEl.textContent = '';
+            // Use `clearInterval()` to stop the timer
+            clearInterval(timeInterval);
+            // Call the `displayMessage()` function
+            onlyDisplaySection("#finish");
+          }
     }, 1000);
-    setNextQuestion()
 }
-
 function setNextQuestion() {
+    resetState()
     showQuestion(shuffleQuestions[currentQuestionsIndex])
 
 }
@@ -65,9 +68,6 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer)
         answerButtonsElement.appendChild(button)
     })
-
-
-
 }
 
 function resetState() {
@@ -77,6 +77,8 @@ function resetState() {
     }
 }
 function selectAnswer(e) {
+    const selectButton = e.target
+    const correct = selectButton.dataset.correct
 
 }
 
