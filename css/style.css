@@ -54,6 +54,7 @@ main {
     padding: 10px;
     background-color: cornflowerblue;
     border-radius: 5px;
+    border: 5px solid black;
     box-shadow: 0 0 10;
 }
 
@@ -75,5 +76,6 @@ main {
     padding: 10px;
     background-color: cornflowerblue;
     border-radius: 5px;
+    border: 5px solid black;
     box-shadow: 0 0 10;
 }
