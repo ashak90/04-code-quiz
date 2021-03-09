@@ -2,6 +2,7 @@ const startButton = document.getElementById('start')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const finishElement = document.getElementById('finish')
 var timerEl = document.getElementById('timer')
 
 let currentQuestions = [];
@@ -22,6 +23,13 @@ function startGame() {
     setNextQuestion()
 }
 
+function endGame (){
+    questionContainerElement.classList.add('hide')
+
+    finishElement.classList.remove ('hide')
+
+}
+
 function setTime () {
     var timeLeft = 5;
 
@@ -38,13 +46,13 @@ function setTime () {
             timerEl.textContent = 'Timer: ' + timeLeft + ' second remaining';
             timeLeft--;
         }
-        else {
+        else if (timeLeft===0) {
             // Once `timeLeft` gets to 0, set `timerEl` to an empty string
-            timerEl.textContent = '';
+            timerEl.textContent = timeLeft + ' seconds remaining';
             // Use `clearInterval()` to stop the timer
             clearInterval(timeInterval);
             // Call the `displayMessage()` function
-            onlyDisplaySection("#finish");
+            endGame();
           }
     }, 1000);
 }
