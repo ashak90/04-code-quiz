@@ -39,7 +39,7 @@ main {
 
 #start {
     width: 800px;
-    max-height: 90%;
+    max-height: 80%;
     padding: 10px;
     background-color: cornflowerblue;
     border-radius: 5px;
@@ -52,7 +52,7 @@ main {
     width: 800px;
     max-height: 80%;
     padding: 10px;
-    background-color: purple;
+    background-color: cornflowerblue;
     border-radius: 5px;
     box-shadow: 0 0 10;
 }
@@ -67,4 +67,13 @@ main {
 
 .hide {
     display: none;
+}
+
+#finish {
+    width: 800px;
+    max-height: 80%;
+    padding: 10px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    box-shadow: 0 0 10;
 }
