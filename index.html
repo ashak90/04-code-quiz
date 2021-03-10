@@ -17,31 +17,35 @@
         <div id= "timer"> Time: </div>
     </header>
     <main class="container">
-        <div id="start">
-            <h1 id="header"> Coding Quiz Challenge </h1>
-            <p id="instruction"> Try to answer the following code-relating within the time limit. Keep in mind that
-                incorrect answers will penalize your score/time by 10 seconds!</p>
-            <button id="start-btn" class="start-btn btn"> Start</button>
+        <div id="card-container">
+            <div id="start">
+                <h1 id="header"> Coding Quiz Challenge </h1>
+                <p id="instruction"> Try to answer the following code-relating within the time limit. Keep in mind that
+                    incorrect answers will penalize your score/time by 10 seconds!</p>
+                <button id="start-btn" class="start-btn btn"> Start</button>
 
-        </div>
-        <div id="question-container" class="hide">
-            <h2 id="question"> Question:  </h2>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn"> Answer 1 </button>
-                <button class="btn"> Answer 2 </button>
-                <button class="btn"> Answer 3 </button>
-                <button class="btn"> Answer 4 </button>
+            </div>
+            <div id="question-container" class="hide">
+                <h2 id="question"> Question:  </h2>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn"> Answer 1 </button>
+                    <button class="btn"> Answer 2 </button>
+                    <button class="btn"> Answer 3 </button>
+                    <button class="btn"> Answer 4 </button>
+                </div>
+            </div>
+
+            <div id= "finish" class="hide">
+                <h2> All Done!</h2>
+                <p> You final score is <span id="score"> </span></p>
+                <p> Your initials</p> <input id="intials"> </form>
+                <button> Submit </button>
+
             </div>
         </div>
-
-        <div id= "finish" class="hide">
-            <h2> All Done!</h2>
-            <p> You final score is <span id="score"> </span></p>
-            <p> Your initials</p> <input id="intials"> </form>
-            <button> Submit </button>
-
-        </div>
     </main>
+
+ 
     
 
     <script src="./js/script.js"></script> 

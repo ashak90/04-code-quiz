@@ -3,9 +3,12 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* body {
-    background-color: grey;
-} */
+body {
+    padding: 0;
+    margin: 0;
+    background-color: lightgrey !important;
+    font-family: "Kumbh Sans", sans-serif;
+  }
 
 header {
     margin: auto;
@@ -27,7 +30,7 @@ header {
     padding-top: 10px;
 }
 
-main {
+/* main {
     padding: 0;
     margin-top: -100px;
     display: flex;
@@ -35,9 +38,19 @@ main {
     height: 100vh;
     justify-content: center;
     align-items: center;
-}
-
-#start {
+} */
+#card-container {
+    border: 3px outset black;
+    box-shadow: 0 0 25px 1px darkslategray;
+    border-radius: 40px;
+    margin-top: 30px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 30px;
+    background-color: cornflowerblue;
+  }
+  
+/* #start {
     width: 800px;
     max-height: 80%;
     padding: 10px;
@@ -46,9 +59,9 @@ main {
     border: 5px solid black;
     box-shadow: 0 0 10;
 
-}
+} */
 
-#question-container {
+/* #question-container {
     width: 800px;
     max-height: 80%;
     padding: 10px;
@@ -56,7 +69,7 @@ main {
     border-radius: 5px;
     border: 5px solid black;
     box-shadow: 0 0 10;
-}
+} */
 
 .btn-grid {
     display: grid;
@@ -78,4 +91,16 @@ main {
     border-radius: 5px;
     border: 5px solid black;
     box-shadow: 0 0 10;
+}
+
+h1,
+p,
+#card-footer {
+  text-align: center;
+  margin-top: 25px;
+}
+
+#start-btn {
+    justify-self: center;
+    align-self: center;
 }
