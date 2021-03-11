@@ -48,12 +48,13 @@ header {
     margin-right: 150px;
     padding: 30px;
     background-color: cornflowerblue;
-    align-items: center;
+    align-content: center;
     justify-items: center;
   }
-#start-btn {
+#start-btn, #end-btn {
     background-color: bisque;
-    ;
+    display: block;
+    margin: auto;
 }
 /* #start {
     width: 800px;
@@ -81,7 +82,8 @@ header {
 }
 
 .btn {
-    margin: 5px; 
+    margin: 5px;
+    background-color: aliceblue; 
 }
 
 .hide {
@@ -105,7 +107,4 @@ p,
   margin-top: 25px;
 }
 
-#start-btn {
-    justify-self: center;
-    align-self: center;
-}
+
