@@ -18,65 +18,65 @@
         </div>
         <div id="timer"> Time: </div>
     </header>
-    <main class="container">
+    <div class="container" id="main-container">
         <div id="card-container">
             <div id="card-body">
-                <h2> Coding Quiz Challenge</h2>
-                <div id="instruction-slide">
-                    <p> Try to answer the following code-relating within the time limit. </p>
-                    <p> Note: Keep in mind that incorrect answers will penalize your score/time by 10 seconds</p>
+                <span id="target-me">
+                    <h2>Coding Knowledge Time Trial</h2>
+                </span>
+                <hr />
+                <div id="intro-slide">
+                    <p>
+                        A timer will appear in the upper right corner of the page when you
+                        click the start button.
+                    </p>
+                    <p>
+                        Try to answer the following code-related questions within the time
+                        limit.
+                    </p>
+                    <p>Note: incorrect answers will take 10 seconds off the clock!</p>
                 </div>
-
                 <div id="question-slide">
                     <div id="question-prompt-text">
-
+                        <!-- Question text appears here -->
                     </div>
-
-                    <div id="answer-buttons" class="btn-grid hide">
-
+                    <div id="answer-buttons" class="btn-stack hide">
+                        <!-- answer buttons appear here-->
                     </div>
                 </div>
-
-                <div id="card-footer">
-                    <button class="btn btn-primary btn-lg" id="start-btn">
-                        Start Quiz
-                    </button>
-                    <button class="btn btn-outline-info btn-lg hide" id="next-btn">
-                        Next question
-                    </button>
-
-                </div>
-                <!-- <div id="start">
-                <h1 id="header"> Coding Quiz Challenge </h1>
-                <p id="instruction"> Try to answer the following code-relating within the time limit. Keep in mind that
-                    incorrect answers will penalize your score/time by 10 seconds!</p>
-                <button id="start-btn" class="start-btn btn"> Start</button>
-
-        </div> -->
-                <!-- <div id="question-container" class="hide">
-                <h2 id="question"> Question:  </h2>
-                <div id="answer-buttons" class="btn-grid">
-                    <button class="btn"> Answer 1 </button>
-                    <button class="btn"> Answer 2 </button>
-                    <button class="btn"> Answer 3 </button>
-                    <button class="btn"> Answer 4 </button>
-                </div>
-            </div> -->
-
-                <!-- <div id="finish" class="hide">
-            <h2> All Done!</h2>
-            <p> You final score is <span id="score"> </span></p>
-            <p> Your initials</p> <input id="intials"> </form>
-            <button id="end-btn"> Submit </button>
-
-        </div> -->
             </div>
-    </main>
+            <div id="card-footer">
+                <button class="btn btn-primary btn-lg" id="start-btn">
+                    Start Quiz
+                </button>
+                <button class="btn btn-outline-info btn-lg hide" id="next-btn hide">
+                    Next question
+                </button>
+            </div>
+        </div>
+        <!-- =============================================================================================== -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+        <!-- Game over Modal -->
+        <div class="modal-bg hide" id="game-over-mod-bg">
+            <div id="game-over-mod">
+                <h1>Quiz Complete!</h1>
+                <p>
+                    You got <span id="questions-right"></span> out of
+                    <span id="total-questions"></span> questions correct<br />with
+                    <span id="time-remainder"></span> seconds remaining.
+                </p>
+                <label for="name">Enter your name for the scoreboard:</label>
+                <input type="text" id="name-input-field" name="name" />
+                <button class="btn btn-secondary submit-btn">Submit</button>
+                <img src="./Assets/modalcloseicon.png" width="25px" id="gom-close-button" />
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+        <script src="./js/script.js"></script>
 
 
 </body>
