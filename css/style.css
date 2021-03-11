@@ -48,8 +48,13 @@ header {
     margin-right: 150px;
     padding: 30px;
     background-color: cornflowerblue;
+    align-items: center;
+    justify-items: center;
   }
-  
+#start-btn {
+    background-color: bisque;
+    ;
+}
 /* #start {
     width: 800px;
     max-height: 80%;
