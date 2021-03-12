@@ -83,7 +83,7 @@ function startTimer() {
     timer.setAttribute("id", "timer-readout");
     document.body.appendChild(timer);
 
-    timer.innerHTML = "Ready, Begin!!";
+    timer.innerHTML = "Ready, Go!!";
     myInterval = setInterval(() => {
         gameDurationInSec--;
 
@@ -93,7 +93,7 @@ function startTimer() {
             secondHand = "0" + secondHand;
         }
 
-        timer.innerHTML = `${minuteHand}:${secondHand}`;
+        timer.innerHTML = "Time: "+`${minuteHand}:${secondHand}`;
 
         if (gameDurationInSec <= 0) {
             gameOver();
