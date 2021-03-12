@@ -61,6 +61,23 @@ header {
 .btn-stack {
     display: grid;
 }
+
+#timer-readout {
+    text-align: center;
+    justify-content: center;
+    padding-top: 13px;
+    padding-bottom: 7px;
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    background-color: cornflowerblue;
+    border: 3px solid black;
+    font-size: 20pt;
+    min-width: 110px;
+    display: flex;
+    border-radius: 25px;
+
+}
 /* #start {
     width: 800px;
     max-height: 80%;
