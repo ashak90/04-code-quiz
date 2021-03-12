@@ -73,7 +73,7 @@ header {
     background-color: cornflowerblue;
     border: 3px solid black;
     font-size: 20pt;
-    min-width: 110px;
+    width: 130px;
     display: flex;
     border-radius: 25px;
 
