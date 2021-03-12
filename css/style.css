@@ -52,7 +52,8 @@ header {
     justify-items: center;
   }
 #start-btn, #end-btn {
-    background-color: bisque;
+    background-color: lightgray;
+    color: black;
     display: block;
     margin: auto;
 }
