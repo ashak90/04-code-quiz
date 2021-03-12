@@ -70,10 +70,10 @@ function startGame() {
     totalCorrect = 0
     questionsAttempted = 0
     gameDurationInSec = gameDuration
-    // resetAnswers();
-    startButton.classList.add('hide');
-    introSlide.classList.add('hide');
-    answerButtonsDiv.classList.remove('hide');
+    resetAnswers();
+    startButton.classList.add("hide");
+    introSlide.classList.add("hide");
+    answerButtonsDiv.classList.remove("hide");
     showNextQuestion();
     startTimer();
 }
