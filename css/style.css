@@ -185,3 +185,10 @@ p,
 }
 
 
+#answer-feedback {
+    margin-top: 20px;
+    border-top: 1px solid lightgray;
+    color: black;
+    font-style: italic;
+    font-size: 20px;
+}
