@@ -15,28 +15,28 @@ const quizQuestions = [
         question: 'What is 2+2?',
         answer: [
             { text: '4', correct: true },
-            { text: '5', correct: true },
-            { text: '6', correct: true },
-            { text: '6', correct: true },
+            { text: '5', correct: false },
+            { text: '6', correct: false },
+            { text: '6', correct: false },
 
         ]
     },
     {
-        question: 'What is 67676?',
+        question: 'What is 5+5?',
         answer: [
-            { text: 'ndd', correct: true },
-            { text: 'dndndjd', correct: true },
-            { text: 'dmdndjd', correct: true },
-            { text: '6', correct: true },
+            { text: '12', correct: false },
+            { text: '10', correct: true },
+            { text: '16', correct: false },
+            { text: '6', correct: false },
 
         ]
     }, {
         question: 'What is everything?',
         answer: [
             { text: '4', correct: true },
-            { text: 'dddd5', correct: true },
-            { text: '6dcdcdc', correct: true },
-            { text: '6cddcd', correct: true },
+            { text: 'dddd5', correct: false },
+            { text: '6dcdcdc', correct: false },
+            { text: '6cddcd', correct: false },
 
         ]
     },
@@ -46,7 +46,7 @@ const quizQuestions = [
 var currentQuestionIndex = 0;
 var totalCorrect = 0;
 var questionsAttempted = 0;
-const gameDuration = 75;
+const gameDuration = 5;
 var gameDurationInSec = gameDurationInSec;
 var gameDurationInMin = gameDurationInSec / 60;
 var totalQuestions = quizQuestions.length;

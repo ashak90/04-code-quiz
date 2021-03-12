@@ -76,8 +76,47 @@ header {
     width: 130px;
     display: flex;
     border-radius: 25px;
-
 }
+
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #00000060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+  }
+  
+  .modal-active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  #game-over-mod,
+  #scoreboard-mod {
+    background-color: white !important;
+    border-style: outset;
+    border-radius: 25px;
+    color: #3d0066;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+    min-width: 50%;
+    min-height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    overflow-x: auto;
+  }
+  
 /* #start {
     width: 800px;
     max-height: 80%;
