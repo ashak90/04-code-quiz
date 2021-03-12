@@ -69,7 +69,23 @@ header {
     padding-bottom: 7px;
     position: absolute;
     top: 80px;
-    right: 100px;
+    right: 80px;
+    background-color: cornflowerblue;
+    border: 3px solid black;
+    font-size: 20pt;
+    width: 130px;
+    display: flex;
+    border-radius: 25px;
+}
+
+#score-readout {
+    text-align: center;
+    justify-content: center;
+    padding-top: 13px;
+    padding-bottom: 7px;
+    position: absolute;
+    top: 200px;
+    right: 80px;
     background-color: cornflowerblue;
     border: 3px solid black;
     font-size: 20pt;

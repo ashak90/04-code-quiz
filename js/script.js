@@ -76,6 +76,7 @@ function startGame() {
     answerButtonsDiv.classList.remove("hide");
     showNextQuestion();
     startTimer();
+    scoreDisplay();
 }
 
 function startTimer() {
@@ -101,6 +102,13 @@ function startTimer() {
     }, 1000);
 }
 
+function scoreDisplay (){
+    var score = document.createElement("div");
+    score.setAttribute("id", "score-readout");
+    document.body.appendChild(score);
+
+    score.innerHTML = "Score: ";
+}
 function nextQuestionSlide() {
     resetAnswers();
     showNextQuestion();
@@ -164,7 +172,7 @@ function setStatusClass(element, correct) {
   function gameOver() {
     nextButton.classList.add("hide");
     clearInterval(myInterval);
-    document.getElementById("timer-readout").classList.add("hide");
+    // document.getElementById("timer-readout").classList.add("hide");
     gameOverModal.classList.add("modal-active");
     startButton.innerText = "Play Again";
     startButton.classList.remove("hide");
