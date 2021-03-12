@@ -1,12 +1,12 @@
 //Variables from the HTML Code 
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
-const instructionSlide = document.getElementById("intro-slide");
-const questionElement = document.getElementById("question-prompt-text");
+const introSlide = document.getElementById("intro-slide");
+const questionPromptEl = document.getElementById("question-prompt-text");
 const answerButtonsDiv = document.getElementById("answer-buttons");
 const questionRight = document.getElementById("questions-right");
 const totalQuestionsEl = document.getElementById("total-questions");
-const timeRemainingEl = document.getElementById("time-remainder");
+const timeRemainderEl = document.getElementById("time-remainder");
 const gameOverModal = document.getElementById("game-over-mod-bg");
 
 // Question Bank//
@@ -56,23 +56,23 @@ var myInterval;
 //Event Listeners//
 
 startButton.addEventListener("click", startGame);
-nextButton.addEventListener("click", () => {
-    currentQuestionIndex++;
-    nextQuestionSlide();
-  });
+// nextButton.addEventListener("click", () => {
+//     currentQuestionIndex++;
+//     nextQuestionSlide();
+//   });
 
-//Start Game
+// Start Game
 
 function startGame() {
     console.log('Started')
     currentQuestionsIndex = 0
-    // shuffleQuestions = quizQuestions.sort(() => Math.random() - .5)
+    shuffleQuestions = quizQuestions.sort(() => Math.random() - .5)
     totalCorrect = 0
     questionsAttempted = 0
     gameDurationInSec = gameDuration
     // resetAnswers();
     startButton.classList.add('hide');
-    instructionSlide.classList.add('hide');
+    introSlide.classList.add('hide');
     answerButtonsDiv.classList.remove('hide');
     showNextQuestion();
     startTimer();
@@ -102,20 +102,20 @@ function startTimer() {
 }
 
 function nextQuestionSlide() {
-    // resetAnswers();
+    resetAnswers();
     showNextQuestion();
 }
 
-// function resetAnswers() {
-//     while (answerButtonsDiv.firstChild) {
-//       answerButtonsDiv.removeChild(answerButtonsDiv.firstChild);
-//     }
-//     nextButton.classList.add("hide");
-// }
+function resetAnswers() {
+    while (answerButtonsDiv.firstChild) {
+      answerButtonsDiv.removeChild(answerButtonsDiv.firstChild);
+    }
+    nextButton.classList.add("hide");
+}
 
 function showNextQuestion(question) {
-    questionElement.innerText=quizQuestions[currentQuestionIndex].question;
-    quizQuestions[currentQuestionIndex].aswers.forEach((answer) => {
+    questionPromptEl.innerText=quizQuestions[currentQuestionIndex].question;
+    quizQuestions[currentQuestionIndex].answer.forEach((answer) => {
         const button = document.createElement("button");
         button.innerText = answer.text;
         button.setAttribute("class", "btn btn-outline-info");
@@ -156,11 +156,11 @@ function setStatusClass(element, correct) {
     }
 }
 
-if (questionsAttempted < totalQuestions) {
-    nextButton.classList.remove("hide");
-  } else {
-    gameOver();
-  }
+// if (questionsAttempted < totalQuestions) {
+//     nextButton.classList.remove("hide");
+//   } else {
+//     gameOver();
+//   }
   function gameOver() {
     nextButton.classList.add("hide");
     clearInterval(myInterval);
