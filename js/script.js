@@ -9,6 +9,7 @@ const totalQuestionsEl = document.getElementById("total-questions");
 const timeRemainderEl = document.getElementById("time-remainder");
 const gameOverModal = document.getElementById("game-over-mod-bg");
 const feedBackDiv = document.getElementById("answer-feedback");
+const gomCloseButton = document.getElementById("gom-close-button");
 
 // Question Bank//
 const quizQuestions = [
@@ -93,6 +94,10 @@ startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     nextQuestionSlide();
+});
+
+gomCloseButton.addEventListener("click", () => {
+    gameOverModal.classList.remove("modal-active");
 });
 
 // Start Game

@@ -51,11 +51,13 @@ header {
     align-content: center;
     justify-items: center;
   }
-#start-btn, #end-btn {
+#start-btn, #end-btn, .submit-btn {
     background-color: lightgray;
     color: black;
     display: block;
     margin: auto;
+    justify-self: center;
+
 }
 
 .btn-stack {
@@ -94,6 +96,14 @@ header {
     border-radius: 25px;
 }
 
+#gom-close-button, #scoreMod-close-button {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-weight: bold;
+    font-size: 20pt;
+    cursor: pointer;
+  }
 .modal-bg {
     position: fixed;
     width: 100%;
@@ -116,8 +126,8 @@ header {
   
   #game-over-mod,
   #scoreboard-mod {
-    background-color: white !important;
-    border-style: outset;
+    background-color: cornflowerblue !important;
+    border: black outset 5px;
     border-radius: 25px;
     color: #3d0066;
     padding-top: 25px;
