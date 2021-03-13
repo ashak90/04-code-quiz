@@ -202,3 +202,11 @@ p,
     font-style: italic;
     font-size: 20px;
 }
+
+.btn-outline-info {
+    padding: 1.5rem 2.5rem;
+    background-color: lightgrey;
+    color: black;
+    margin-left: 150px;
+    margin-right: 150px;
+}
