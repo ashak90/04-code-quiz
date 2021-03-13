@@ -287,6 +287,7 @@ function selectAnswer(event) {
         
     ) {
         gameDurationInSec = 0;
+        timer.innerHTML = 0
         feedBackDiv.innerHTML = "Incorrect! The answer is:  ";
 
     } else {
