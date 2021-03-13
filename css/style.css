@@ -126,7 +126,7 @@ header {
   
   #game-over-mod,
   #scoreboard-mod {
-    background-color: cornflowerblue !important;
+    background-color: lightgrey !important;
     border: black outset 5px;
     border-radius: 25px;
     color: black;
