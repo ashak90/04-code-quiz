@@ -10,6 +10,13 @@ const timeRemainderEl = document.getElementById("time-remainder");
 const gameOverModal = document.getElementById("game-over-mod-bg");
 const feedBackDiv = document.getElementById("answer-feedback");
 const gomCloseButton = document.getElementById("gom-close-button");
+const viewScoreBoard = document.getElementById("view-scoreboard");
+const scoreboardModal = document.getElementById("scoreboard-mod-bg");
+const scoreModCloseButton = document.getElementById("scoreMod-close-button");
+const scoreSubmitButton = document.getElementById("submit-btn");
+const nameInputField = document.getElementById("name-input-field");
+const scoreTable = document.getElementById("view-scores-here");
+const clearButton = document.getElementById("clear-btn")
 
 // Question Bank//
 const quizQuestions = [
@@ -236,7 +243,7 @@ function scoreDisplay() {
     score.setAttribute("id", "score-readout");
     document.body.appendChild(score);
 
-    score.innerHTML = "Score: " + questionsRight;
+    score.innerHTML = "Score: " + `${totalCorrect}`;
 }
 
 function nextQuestionSlide() {
@@ -279,7 +286,7 @@ function selectAnswer(event) {
     // });
     if (selectedButton.dataset.correct) {
         totalCorrect++;
-        feedBackDiv.innerHTML = "Correct! The answer is:  ";
+        feedBackDiv.innerHTML = "Correct!" ;
 
     } else if (
         selectedButton.dataset.correct === false &&
@@ -288,11 +295,11 @@ function selectAnswer(event) {
     ) {
         gameDurationInSec = 0;
         timer.innerHTML = 0
-        feedBackDiv.innerHTML = "Incorrect! The answer is:  ";
+        feedBackDiv.innerHTML = "Incorrect!";
 
     } else {
         gameDurationInSec -= 10;
-        feedBackDiv.innerHTML = "Incorrect! The answer is:  ";
+        feedBackDiv.innerHTML = "Incorrect!";
 
 
     }
