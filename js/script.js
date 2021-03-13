@@ -14,67 +14,156 @@ const gomCloseButton = document.getElementById("gom-close-button");
 // Question Bank//
 const quizQuestions = [
     {
-        question: "What is 2+2?",
+        question: "Inside which html element should the javascript be?",
         answers: [
-            { text: "4", correct: true },
-            { text: "5", correct: false },
-            { text: "6", correct: false },
-            { text: "6", correct: false },
+            { text: "<script>", correct: true },
+            { text: "<paragraph>", correct: false },
+            { text: "<header>", correct: false },
+            { text: "<js>", correct: false },
 
         ]
     },
     {
-        question: 'What is 5+5?',
+        question: "What does CSS stand for?",
         answers: [
-            { text: '12', correct: false },
-            { text: '10', correct: true },
-            { text: '16', correct: false },
-            { text: '6', correct: false },
-
+            { text: "Creative Style Sheets", correct: false },
+            { text: "Cascading Style Sheets", correct: true },
+            { text: "Colorful Style Sheets", correct: false },
+            { text: "Computer Style Sheets", correct: false },
         ]
     }, {
-        question: 'What is everything?',
+        question: "Which CSS property is used to change the text color of an element?",
         answers: [
-            { text: '4', correct: true },
-            { text: 'dddd5', correct: false },
-            { text: '6dcdcdc', correct: false },
-            { text: '6cddcd', correct: false },
+            { text: "fcolor", correct: false },
+            { text: "text-color", correct: false },
+            { text: "color", correct: true },
+            { text: "fgcolor", correct: false },  
+        ]
+    },
+
+    {
+        question: 'What is the correct syntax for referring to an external script called "xxx.js"?',
+        answers: [
+            { text: '<script name="xxx.js">', correct: false },
+            { text: '<script src="xxx.js">', correct: true },
+            { text: '<script ref="xxx.js">', correct: false },
+            { text: '<script href="xxx.js">', correct: false },
 
         ]
     },
 
     {
-        question: 'What is everything?',
+        question: "How do you display hyperlinks without an underline?",
         answers: [
-            { text: '4', correct: true },
-            { text: 'dddd5', correct: false },
-            { text: '6dcdcdc', correct: false },
-            { text: '6cddcd', correct: false },
-
+            { text: " a {underline:none;}", correct: false },
+            { text: "a {text-decoration:no-underline;}", correct: false },
+            { text: "a {text-decoration:none;}", correct: true },
+            { text: "a {decoration:no-underline;}", correct: true },
         ]
     },
 
     {
-        question: 'What is everything?',
+        question: 'How do you call a function named "myFunction"?',
         answers: [
-            { text: '4', correct: true },
-            { text: 'dddd5', correct: false },
-            { text: '6dcdcdc', correct: false },
-            { text: '6cddcd', correct: false },
-
+            { text: 'myFunction', correct: false },
+            { text: 'call function myFunction()', correct: false },
+            { text: 'call myFunction()', correct: false },
+            { text: "myFunction()", correct: true },
         ]
     },
 
     {
-        question: 'What is everything?',
+        question: "How does a FOR loop start?",
         answers: [
-            { text: '4', correct: true },
-            { text: 'dddd5', correct: false },
-            { text: '6dcdcdc', correct: false },
-            { text: '6cddcd', correct: false },
-
+            { text: "for (i = 0; i <= 5; i++)", correct: true },
+            { text: "for (i = 0; i <= 5)", correct: false },
+            { text: "for i = 1 to 5", correct: false },
+            { text: "for (i <= 5; i++)", correct: false },
         ]
     },
+
+    {
+        question: "How do you select an element with id 'demo'?",
+        answers: [
+            { text: ".demp", correct: false },
+            { text: "*demo", correct: false },
+            { text: "#demo", correct: true },
+            { text: "demo", correct: false },
+        ]
+    },
+
+    {
+        question: "How can you open a link in a new tab/browser window?",
+        answers: [
+            { text: ' <a href="url" new>', correct: false },
+            { text: '<a href="url" target="_blank">', correct: true },
+            { text: '<a href="url" target="new">', correct: false },
+            { text: '<a href="url">', correct: false },
+        ]
+    },
+
+    {
+        question: "How can you make a bulleted list?",
+        answers: [
+            { text: "<list>", correct: false },
+            { text: "<ol>", correct: false },
+            { text: "<dl>", correct: false },
+            { text: "<ul> ", correct: true },
+        ]
+    },
+
+    {
+        question: "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
+        answers: [
+            { text: "alt", correct: true },
+            { text: "title", correct: false },
+            { text: "longdesc", correct: false },
+            { text: "src", correct: false },
+        ] 
+    },
+
+    {
+        question: "Which HTML element defines navigation links?",
+        answers: [
+            { text: "<navigate>", correct:false  },
+            { text: "<navigation>", correct: false },
+            { text: "<navigation-section>", correct: false },
+            { text: "<nav>  ", correct: true },
+        ]
+    },
+
+    {
+        question: "What is the correct way to write a JavaScript array?",
+        answers: [
+            { text: 'var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")', correct: false },
+            { text: 'var colors = ["red", "green", "blue"]', correct: true },
+            { text: 'var colors = "red", "green", "blue"', correct: false },
+            { text: '  var colors = (1:"red", 2:"green", 3:"blue")', correct: false },
+        ]  
+    },
+
+    {
+        question: "Which event occurs when the user clicks on an HTML element?",
+        answers: [
+            { text: "onmouseclick", correct: false },
+            { text: "onchange", correct: false },
+            { text: "onclick", correct: true },
+            { text: "onmouseover", correct: false },
+        ] 
+    },
+
+    {
+        question: "How do you declare a JavaScript variable?",
+        answers: [
+            { text: "var carName;", correct: true },
+            { text: "v carName;", correct: false },
+            { text: "variable carName;", correct: false },
+            { text: "variable =c carName", correct: false },
+        ]
+    
+    },
+
+    
 ]
 // Varibales that come up in the .js file//
 
@@ -99,6 +188,8 @@ nextButton.addEventListener("click", () => {
 gomCloseButton.addEventListener("click", () => {
     gameOverModal.classList.remove("modal-active");
 });
+
+
 
 // Start Game
 
@@ -145,8 +236,9 @@ function scoreDisplay() {
     score.setAttribute("id", "score-readout");
     document.body.appendChild(score);
 
-    score.innerHTML = "Score: ";
+    score.innerHTML = "Score: " + questionsRight;
 }
+
 function nextQuestionSlide() {
     resetAnswers();
     showNextQuestion();
@@ -228,9 +320,20 @@ function selectAnswer(event) {
     }
 }
 
+function scoreDisplay() {
+    var score = document.createElement("div");
+    score.setAttribute("id", "score-readout");
+    document.body.appendChild(score);
+
+    score.innerHTML = "Score: " + totalCorrect++;
+}
+
+
 function gameOver() {
     // nextButton.classList.add("hide");
     clearInterval(myInterval);
+    nextButton.classList.add("hide");
+
     gameOverModal.classList.add("modal-active");
     startButton.innerText = "Play Again";
     startButton.classList.remove("hide");
