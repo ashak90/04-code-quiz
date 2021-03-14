@@ -261,13 +261,7 @@ function startTimer() {
     }, 1000);
 }
 
-function scoreDisplay() {
-    var score = document.createElement("div");
-    score.setAttribute("id", "score-readout");
-    document.body.appendChild(score);
 
-    score.innerHTML = "Score: " + `${totalCorrect}`;
-}
 
 function nextQuestionSlide() {
     resetAnswers();
@@ -328,14 +322,6 @@ function selectAnswer(event) {
     }
 }
 
-function scoreDisplay() {
-    var score = document.createElement("div");
-    score.setAttribute("id", "score-readout");
-    document.body.appendChild(score);
-
-    score.innerHTML = "Score: " + totalCorrect++;
-}
-
 
 function gameOver() {
     clearInterval(myInterval);
@@ -365,7 +351,7 @@ function submitScore () {
 
     var thisGameResult = {
         name: nameInputField.value,
-        score: (totalCorrect*100),
+        score: totalCorrect*100,
         remainder: gameDurationInSec,
     };
 
@@ -381,9 +367,9 @@ function submitScore () {
     nameField.textContent = gameResultsArray[i].name;
     scoreTableRow.appendChild(nameField);
 
-    var percentField = document.createElement("td");
-    percentField.textContent = gameResultsArray[i].percent;
-    scoreTableRow.appendChild(percentField);
+    var scoreField = document.createElement("td");
+    scoreField.textContent = gameResultsArray[i].score;
+    scoreTableRow.appendChild(scoreField);
 
     var timeField = document.createElement("td");
     timeField.textContent = gameResultsArray[i].remainder;
