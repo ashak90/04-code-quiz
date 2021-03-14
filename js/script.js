@@ -221,15 +221,6 @@ clearButton.addEventListener("click", () => {
   });
 
 
-
-
-
-
-
-
-
-
-
 // Start Game
 
 function startGame() {
@@ -309,13 +300,7 @@ function selectAnswer(event) {
     questionsAttempted++;
     var selectedButton = event.target;
     feedBackDiv.classList.remove("hide")
-    // var createDiv = document.createElement("div");
-    // createDiv.setAttribute("id", "createDiv");
-    // document.body.appendChild(createDiv);
-
-    // Array.from(answerButtonsDiv.children).forEach((button) => {
-    //     setStatusClass(button);
-    // });
+  
     if (selectedButton.dataset.correct) {
         totalCorrect++;
         feedBackDiv.innerHTML = "Correct!" ;
@@ -336,23 +321,6 @@ function selectAnswer(event) {
 
     }
 
-
-    // function setStatusClass(element, correct) {
-    //     clearStatusClass(element);
-    //     if (correct) {
-    //         element.classList.add("btn-success");
-    //         element.classList.remove("btn-outline-info");
-    //     } else {
-    //         element.classList.add("btn-danger");
-    //         element.classList.remove("btn-outline-info");
-    //     }
-    // }
-
-    // function clearStatusClass(element) {
-    //     element.classList.remove("btn-success");
-    //     element.classList.remove("btn-danger");
-    // }
-
     if (questionsAttempted < totalQuestions) {
         nextButton.classList.remove("hide");
     } else {
@@ -370,7 +338,6 @@ function scoreDisplay() {
 
 
 function gameOver() {
-    // nextButton.classList.add("hide");
     clearInterval(myInterval);
     nextButton.classList.add("hide");
 
@@ -446,7 +413,7 @@ function viewScoreBoardFunc (){
         scoreTableRow.appendChild(nameField);
     
         var percentField = document.createElement("td");
-        percentField.textContent = gameResultsArray[i].percent;
+        percentField.textContent = gameResultsArray[i].score;
         scoreTableRow.appendChild(percentField);
     
         var timeField = document.createElement("td");

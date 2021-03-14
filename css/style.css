@@ -30,15 +30,6 @@ header {
     padding-top: 10px;
 }
 
-/* main {
-    padding: 0;
-    margin-top: -100px;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-} */
 #card-container {
     border: 3px outset black;
     box-shadow: 0 0 25px 1px darkslategray;
@@ -119,18 +110,18 @@ header {
     transition: visibility 0s, opacity 0.3s;
   }
   
-  .modal-active {
+.modal-active {
     visibility: visible;
     opacity: 1;
-  }
+}
   
-  #game-over-mod,
-  #scoreboard-mod {
+#game-over-mod,
+#scoreboard-mod {
     background-color: lightgrey !important;
     border: black outset 5px;
     border-radius: 25px;
     color: black;
-    padding-top: 25px;
+     padding-top: 25px;
     padding-bottom: 25px;
     position: relative;
     min-width: 50%;
@@ -140,29 +131,9 @@ header {
     justify-content: center;
     align-items: center;
     overflow: auto;
-    overflow-x: auto;
-  }
-  
-/* #start {
-    width: 800px;
-    max-height: 80%;
-    padding: 10px;
-    background-color: cornflowerblue;
-    border-radius: 5px;
-    border: 5px solid black;
-    box-shadow: 0 0 10;
-
-} */
-
-/* #question-container {
-    width: 800px;
-    max-height: 80%;
-    padding: 10px;
-    background-color: cornflowerblue;
-    border-radius: 5px;
-    border: 5px solid black;
-    box-shadow: 0 0 10;
-} */
+    overflow-x: auto; 
+}
+ 
 
 .btn-grid {
     display: grid;
@@ -185,7 +156,6 @@ header {
     padding: 10px;
     background-color: cornflowerblue;
     border-radius: 5px;
-    /* border: 5px solid black; */
     box-shadow: 0 0 10;
 }
 
