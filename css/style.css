@@ -51,7 +51,7 @@ header {
     align-content: center;
     justify-items: center;
   }
-#start-btn, #end-btn, .submit-btn {
+#start-btn, #end-btn, #submit-btn, #clear-btn {
     background-color: lightgray;
     color: black;
     display: block;
@@ -173,6 +173,8 @@ header {
     background-color: aliceblue; 
 }
 
+
+
 .hide {
     display: none !important;
 }
@@ -185,6 +187,11 @@ header {
     border-radius: 5px;
     /* border: 5px solid black; */
     box-shadow: 0 0 10;
+}
+
+thead {
+    display: table-cell;
+    border: blac;
 }
 
 h1,
