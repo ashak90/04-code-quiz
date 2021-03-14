@@ -196,6 +196,38 @@ gomCloseButton.addEventListener("click", () => {
 });
 viewScoreBoard.addEventListener("click", viewScoreBoardFunc);
 
+scoreModCloseButton.addEventListener("click", () => {
+    scoreModCloseButton.classList.remove("modal-active");
+    location.reload();
+});
+
+scoreSubmitButton.addEventListener("click", ()=> {
+    gameOverModal.classList.remove("modal-active");
+    scoreboardModal.classList.add("modal-active");
+    submitScore();
+});
+
+nameInputField.addEventListener('keypress', function(e) {
+    if (e.keyCode===13) {
+        gameOverModal.classList.remove("modal-active");
+        scoreboardModal.classList.add("modal-active");
+        submitScore();
+    }  
+});
+
+clearButton.addEventListener("click", () => {
+    localStorage.clear();
+    location.reload();
+  });
+
+
+
+
+
+
+
+
+
 
 
 // Start Game
