@@ -16,7 +16,7 @@ const scoreModCloseButton = document.getElementById("scoreMod-close-button");
 const scoreSubmitButton = document.getElementById("submit-btn");
 const nameInputField = document.getElementById("name-input-field");
 const scoreTable = document.getElementById("view-scores-here");
-const clearButton = document.getElementById("clear-btn")
+const clearButton = document.getElementById("clear-btn");
 
 // Question Bank//
 const quizQuestions = [
@@ -191,10 +191,10 @@ nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     nextQuestionSlide();
 });
-
 gomCloseButton.addEventListener("click", () => {
     gameOverModal.classList.remove("modal-active");
 });
+viewScoreBoard.addEventListener("click", viewScoreBoardFunc);
 
 
 
@@ -351,4 +351,76 @@ function gameOver() {
     if (gameDurationInSec >= 0) {
         timeRemainderEl.innerHTML = gameDurationInSec;
     } else timeRemainderEl.innerHTML = "0";
+}
+
+function submitScore () {
+    event.preventDefault();
+    const storedScores = localStorage.getItem("gameResultsString");
+    let gameResultsArray;
+
+    if (storedScores === null) {
+        gameResultsArray = [];
+    } else {
+        gameResultsArray -JSON.parse(storedScores);
+    }
+
+    var thisGameResult = {
+        name: nameInputField.value,
+        score: (totalCorrect*100),
+        remainder: gameDurationInSec,
+    };
+
+    gameResultsArray.push(thisGameResult);
+
+    localStorage.setItem("gamesReultsString",JSON.stringify(gameResultsArray))
+
+    for (let i=0; i <gameResultsArray.length; i++) {
+        var scoreTableRow = document.createElement("tr");
+
+    var nameField = document.createElement("th");
+    nameField.setAttribute("scope", "row");
+    nameField.textContent = gameResultsArray[i].name;
+    scoreTableRow.appendChild(nameField);
+
+    var percentField = document.createElement("td");
+    percentField.textContent = gameResultsArray[i].percent;
+    scoreTableRow.appendChild(percentField);
+
+    var timeField = document.createElement("td");
+    timeField.textContent = gameResultsArray[i].remainder;
+    scoreTableRow.appendChild(timeField);
+
+    scoreTable.appendChild(scoreTableRow);
+    };
+}
+
+function viewScoreBoardFunc (){
+    scoreboardModal.classList.add("modal-active")
+    const storedScores = localStorage.getItem("gameResultsString");
+    let gameResultsArray;
+
+    if (storedScores === null) {
+        gameResultsArray = []; //if there is nothing in memory, blank array
+      } else {
+        gameResultsArray = JSON.parse(storedScores); //if there is memory, set the array equal to the unstringified scores
+      }
+    
+      for (let i = 0; i < gameResultsArray.length; i++) {
+        var scoreTableRow = document.createElement("tr");
+    
+        var nameField = document.createElement("th");
+        nameField.setAttribute("scope", "row");
+        nameField.textContent = gameResultsArray[i].name;
+        scoreTableRow.appendChild(nameField);
+    
+        var percentField = document.createElement("td");
+        percentField.textContent = gameResultsArray[i].percent;
+        scoreTableRow.appendChild(percentField);
+    
+        var timeField = document.createElement("td");
+        timeField.textContent = gameResultsArray[i].remainder;
+        scoreTableRow.appendChild(timeField);
+    
+        scoreTable.appendChild(scoreTableRow);
+      }
 }
