@@ -14,11 +14,12 @@ Deployed application: https://ashak90.github.io/04-code-quiz/
 
 ```
 
-## Screenshots
+## Final Product
 
-```
-![homescreen](homescreen.png)
-
+![homescreen](./Assets/screenshots/homescreen.png) 
+![gameplay](./Assets/screenshots/game-play.png) 
+![gameover](./Assets/screenshots/game-over-screen.png) 
+![scoreboard](./Assets/screenshots/scoreboard.png) 
 
 ```
 
